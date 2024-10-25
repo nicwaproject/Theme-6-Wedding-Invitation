@@ -54,9 +54,10 @@ body {
 }
 
 .bottom-left {
-    bottom: 0;
+    bottom: 1;
     left: 0;
     z-index: 2;
+    margin-top: 470px;
 }
 
 /* Posisi bunga Depan*/
