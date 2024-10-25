@@ -6,30 +6,39 @@
     <title>Wedding Invitation</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Style+Script&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Bunga depan -->
     <img src="kanan_atas.svg" class="flower top-right" alt="Top Right Flower">
     <img src="kiri_bawah.svg" class="flower bottom-left" alt="Bottom Left Flower">
 
-    <div class="frame cover" id="cover">
-        <!-- Konten di cover -->
-        <div class="content">
-            <p>The Wedding of</p>
-            <h1>Zhapran & Fira</h1>
-            <p>Kepada Yth.</p>
-            <p id="guest-name"></p>
-            <button id="openInvitationBtn">Open Invitation</button>
+    <!-- Bunga belakang -->
+    <img src="kanan_atas.svg" class="flower back-right" alt="Top Right Flower">
+    <img src="kiri_bawah.svg" class="flower back-left" alt="Bottom Left Flower">
+
+        <div class="frame cover" id="cover">
+            <!-- Konten di cover -->
+            <div class="content">
+                <p class="wedding-of">The Wedding of</p>
+                <h1>Zhapran</h1>
+                <p class="and">&</p>
+                <h1>Fira</h1>
+                <p class="yth">Kepada Yth.</p>
+                <p id="guest-name"></p>
+                <button id="openInvitationBtn">Open Invitation</button>
+            </div>
         </div>
-    </div>
 
     <nav id="navigation" style="display: none;">
         <ul>
             <li><a href="section1" data-section="section1"><i class="fas fa-home"></i></a></li>
             <li><a href="section2" data-section="section2"><i class="fas fa-user"></i></a></li>
-            <li><a href="#" data-section="section3"><i class="fas fa-calendar"></i></a></li>
-            <li><a href="#" data-section="section4"><i class="fas fa-envelope"></i></a></li>
-            <li><a href="#" data-section="section5"><i class="fas fa-gift"></i></a></li>
+            <li><a href="section3" data-section="section3"><i class="fas fa-calendar"></i></a></li>
+            <li><a href="section4" data-section="section4"><i class="fas fa-envelope"></i></a></li>
+            <li><a href="section5" data-section="section5"><i class="fas fa-gift"></i></a></li>
         </ul>
     </nav>
 
@@ -43,12 +52,36 @@
     </div>
 
     <!-- Section 2 (Hidden by default) -->
-    <div id="section2" class="frame" style="display: none;">
+    <div id="section2" class="frame content-section" style="display: none;">
         <div class="content">
-            <h1>Our Story</h1>
+            <h1>The Bridge & The Groom</h1>
             <p>This is how we met and fell in love!</p>
         </div>
     </div>
+
+        <!-- Section 2 (Hidden by default) -->
+        <div id="section3" class="frame content-section" style="display: none;">
+            <div class="content">
+                <h1>Wedding Details</h1>
+                <p>This is how we met and fell in love!</p>
+            </div>
+        </div>
+
+            <!-- Section 2 (Hidden by default) -->
+    <div id="section4" class="frame content-section" style="display: none;">
+        <div class="content">
+            <h1>Message</h1>
+            <p>This is how we met and fell in love!</p>
+        </div>
+    </div>
+
+        <!-- Section 2 (Hidden by default) -->
+        <div id="section5" class="frame content-section" style="display: none;">
+            <div class="content">
+                <h1>Gift</h1>
+                <p>This is how we met and fell in love!</p>
+            </div>
+        </div>
 
     <script src="script.js"></script>
 </body>
