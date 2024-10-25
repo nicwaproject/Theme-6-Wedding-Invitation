@@ -33,8 +33,11 @@ document.addEventListener('DOMContentLoaded', () => {
 function showSection(sectionId) {
     // Hide all sections within the frame
     document.querySelectorAll('.content-section').forEach(section => {
-        section.style.display = 'none';
+        section.style.display = 'none'; // Hide all sections
     });
+
     // Show the selected section's content
-    document.getElementById(sectionId).style.display = 'block';
+    const selectedSection = document.getElementById(sectionId);
+    selectedSection.style.display = 'flex'; // Use flex to center the content
 }
+
