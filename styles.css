@@ -176,6 +176,7 @@ button {
     cursor: pointer;
     border-radius: 15px;
     transition: background-color 0.3s;
+    z-index: 3;
 }
 
 button:hover {
