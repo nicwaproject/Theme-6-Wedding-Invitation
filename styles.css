@@ -5,6 +5,13 @@
     box-sizing: border-box;
 }
 
+:root {
+    --background-mobile: url('Mobile\ Background.jpg'); /* Ganti dengan path gambar kamu */
+    --primary-color: #569168;
+    --secondary-color: #83895d;
+    --overlay-bg: rgba(0, 0, 0, 0.5); /* Overlay background color */
+  }
+
 body {
     background-image: url('Mobile\ Background.jpg');
     background-position: center;
