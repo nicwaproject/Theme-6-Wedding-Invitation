@@ -9,9 +9,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Style+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lateef:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-<!-- Bunga depan -->
+    <!-- Bunga depan -->
     <img src="kananAtas.png" class="flower top-right" alt="Top Right Flower">
     <img src="kiriBawah.png" class="flower bottom-left" alt="Bottom Left Flower">
 
@@ -19,122 +20,139 @@
     <img src="kananAtas.png" class="flower back-right" alt="Top Right Flower">
     <img src="kiriBawah.png" class="flower back-left" alt="Bottom Left Flower">
 
-
-        <div class="frame cover" id="cover">
-            <!-- Konten di cover -->
-            <div class="content">
-                <p class="wedding-of">The Wedding of</p>
-                <h1>Zhapran</h1>
-                <p class="and">&</p>
-                <h1>Fira</h1>
-                <p class="yth">Kepada Yth.</p>
-                <p id="guest-name"></p>
-                <button id="openInvitationBtn">Open Invitation</button>
-            </div>
+    <!-- Cover -->
+    <div class="frame cover" id="cover">
+        <div class="content">
+            <p class="wedding-of">The Wedding of</p>
+            <h1>Zhapran</h1>
+            <p class="and">&</p>
+            <h1>Fira</h1>
+            <p class="yth">Kepada Yth.</p>
+            <p id="guest-name"></p>
+            <button id="openInvitationBtn">Open Invitation</button>
         </div>
+    </div>
 
+    <!-- Navigation -->
     <nav id="navigation" style="display: none;">
         <ul>
             <li><a href="section1" data-section="section1"><i class="fas fa-home"></i></a></li>
             <li><a href="section2" data-section="section2"><i class="fas fa-user"></i></a></li>
             <li><a href="section3" data-section="section3"><i class="fas fa-calendar"></i></a></li>
-            <li><a href="section4" data-section="section4"><i class="fas fa-envelope"></i></a></li>
-            <li><a href="section5" data-section="section5"><i class="fas fa-gift"></i></a></li>
+            <li><a href="section4" data-section="section4"><i class="fas fa-paper-plane"></i></a></li>
+            <li><a href="section5" data-section="section5"><i class="fas fa-inbox"></i></a></li>
         </ul>
     </nav>
 
-   <!-- Section 1 -->
+    <!-- Section 1: Opening -->
     <div class="frame content-section" id="section1" style="display: none;">
-        <!-- Gambar Kaligrafi Bismillah -->
         <div class="content bismillah">
             <img src="bismillah.png" alt="Bismillah Kaligrafi">
         </div>
-    
-        <!-- Ayat Al-Quran Surah Ar-Rum Ayat 21 -->
         <div class="content quran-verse">
             <h2>وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُمْ مِنْ أَنْفُسِكُمْ أَزْوَاجًا لِتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَوَدَّةً وَرَحْمَةً ۚ إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِقَوْمٍ يَتَفَكَّرُونَ</h2>
             <p>"Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri agar kamu merasa tentram kepadanya. Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir." (QS. Ar-Rum: 21)</p>
         </div>
-    
-        <!-- Countdown Acara Pernikahan -->
         <div id="countdown">
-            <div class="time-box">
-              <span id="days">00</span>
-              <span>Hari</span>
-            </div>
-            <div class="time-box">
-              <span id="hours">00</span>
-              <span>Jam</span>
-            </div>
-            <div class="time-box">
-              <span id="minutes">00</span>
-              <span>Menit</span>
-            </div>
-            <div class="time-box">
-              <span id="seconds">00</span>
-              <span>Detik</span>
-            </div>
-          </div>
+            <div class="time-box"><span id="days">00</span><span>Hari</span></div>
+            <div class="time-box"><span id="hours">00</span><span>Jam</span></div>
+            <div class="time-box"><span id="minutes">00</span><span>Menit</span></div>
+            <div class="time-box"><span id="seconds">00</span><span>Detik</span></div>
+        </div>
     </div>
 
-<!-- Section 2 -->
-<div id="section2" class="frame content-section" style="display: none;">
-    <div class="content profile-section">
-        <h1>Profile</h1>
-
-        <!-- Profil Pengantin Pria -->
-        <div class="profile groom">
-            <img src="husband.jpeg" alt="Foto Pengantin Pria" class="profile-photo">
-            <div class="profile-info">
-                <div class="profile-name">
-                <h2>Groom's Name</h2>
-                    <a href="https://instagram.com/grooms_instagram" target="_blank" class="instagram-link">
-                        <i class="fab fa-instagram"></i>
-                    </a>
+    <!-- Section 2: Profile -->
+    <div class="frame content-section" id="section2" style="display: none;">
+        <div class="content profile-section">
+            <h1>Profile</h1>
+            <!-- Groom -->
+            <div class="profile groom">
+                <img src="husband.jpeg" alt="Foto Pengantin Pria" class="profile-photo">
+                <div class="profile-info">
+                    <div class="profile-name">
+                        <h2>Groom's Name</h2>
+                        <a href="https://instagram.com/grooms_instagram" target="_blank" class="instagram-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <p>Son of Mr. Father's Name and Mrs. Mother's Name</p>
                 </div>
-                <p>Son of Mr. Father's Name and Mrs. Mother's Name</p>
             </div>
-        </div>
-
-        <!-- Profil Pengantin Wanita -->
-        <div class="profile bride">
-            <img src="wife.jpeg" alt="Foto Pengantin Wanita" class="profile-photo">
-            <div class="profile-info">
-                <div class="profile-name">
-                    <h2>Bride's Name</h2>
-                    <a href="https://instagram.com/brides_instagram" target="_blank" class="instagram-link">
-                        <i class="fab fa-instagram"></i>
-                    </a>
+            <!-- Bride -->
+            <div class="profile bride">
+                <img src="wife.jpeg" alt="Foto Pengantin Wanita" class="profile-photo">
+                <div class="profile-info">
+                    <div class="profile-name">
+                        <h2>Bride's Name</h2>
+                        <a href="https://instagram.com/brides_instagram" target="_blank" class="instagram-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <p>Daughter of Mr. Father's Name and Mrs. Mother's Name</p>
                 </div>
-                <p>Daughter of Mr. Father's Name and Mrs. Mother's Name</p>
             </div>
         </div>
     </div>
-</div>
 
-        <!-- Section 2 (Hidden by default) -->
-        <div id="section3" class="frame content-section" style="display: none;">
-            <div class="content">
-                <h1>Wedding Details</h1>
-                <p>This is how we met and fell in love!</p>
-            </div>
-        </div>
-
-            <!-- Section 2 (Hidden by default) -->
-    <div id="section4" class="frame content-section" style="display: none;">
+    <!-- Section 3: Wedding Details -->
+    <div class="frame content-section" id="section3" style="display: none;">
         <div class="content">
-            <h1>Message</h1>
-            <p>This is how we met and fell in love!</p>
+            <h1>Wedding Details</h1>
+            <div class="wedding-event">
+                <h2>Akad</h2>
+                <div class="wedding-details">
+                    <div class="wedding-date">
+                        <p class="day">Sabtu</p>
+                        <p class="date">12</p>
+                        <p class="month-year">Nov 2024</p>
+                    </div>
+                    <div class="location-map">
+                        <p>Masjid Al-Ikhlas, Jakarta</p>
+                        <a href="https://maps.google.com/?q=Masjid+Al-Ikhlas+Jakarta" target="_blank" class="map-button"><i class="fas fa-map-marker-alt"></i> Map</a>
+                    </div>
+                </div>
+            </div>
+            <div class="wedding-event">
+                <h2>Resepsi</h2>
+                <div class="wedding-details">
+                    <div class="wedding-date">
+                        <p class="day">Minggu</p>
+                        <p class="date">13</p>
+                        <p class="month-year">Nov 2024</p>
+                    </div>
+                    <div class="location-map">
+                        <p>Gedung Serbaguna, Jakarta</p>
+                        <a href="https://maps.google.com/?q=Gedung+Serbaguna+Jakarta" target="_blank" class="map-button"><i class="fas fa-map-marker-alt"></i> Map</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-        <!-- Section 2 (Hidden by default) -->
-        <div id="section5" class="frame content-section" style="display: none;">
-            <div class="content">
-                <h1>Gift</h1>
-                <p>This is how we met and fell in love!</p>
-            </div>
+    <!-- Section 4: RSVP Form -->
+    <div class="frame content-section" id="section4" style="display: none;">
+        <div class="content">
+            <h1>Messages</h1>
+            <form id="rsvpForm">
+                <div class="form-group"><input type="text" id="guestNameRSVP" placeholder="Your Name" required></div>
+                <div class="form-group"><textarea id="guestMessage" placeholder="Your Message" required></textarea></div>
+                <div class="form-group">
+                    <label for="attendance">Will you attend?</label>
+                    <select id="attendance" required>
+                        <option value="">Select an option</option>
+                        <option value="attending">Attending</option>
+                        <option value="not-attending">Not Attending</option>
+                        <option value="unsure">Unsure</option>
+                    </select>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
         </div>
+    </div>
+
+    <!-- Section 5: Message List -->
+    <div class="frame content-section" id="section5" style="display: none;">
+        <div class="content">
+            <h1>Messages List</h1>
+            <div id="messageList"></div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
