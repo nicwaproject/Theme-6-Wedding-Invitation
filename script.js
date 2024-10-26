@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    
+
     const countdown = () => {
       const weddingDate = new Date("2024-12-31T00:00:00").getTime(); // Set tanggal pernikahan
       const now = new Date().getTime();
@@ -55,6 +55,66 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Perbarui countdown setiap detik
     const timer = setInterval(countdown, 1000);
+
+     // Mengambil data RSVP ketika halaman dimuat
+fetch('https://tema-4-rsvp-handle.glitch.me/rsvps')
+.then(response => response.json())
+.then(data => {
+  data.forEach(item => {
+    const messageItem = document.createElement('div');
+    messageItem.classList.add('message-item');
+    messageItem.innerHTML = `
+      <h4>${item.name} (${item.attendance})</h4>
+      <p>${item.message}</p>
+    `;
+    document.getElementById('messageList').appendChild(messageItem);
+  });
+})
+.catch(error => console.error('Error fetching RSVP data:', error));
+
+// Menangani form RSVP
+document.getElementById('rsvpForm').addEventListener('submit', function (event) {
+event.preventDefault(); // Prevent default form submission
+
+// Get form data
+const guestNameRSVP = document.getElementById('guestNameRSVP').value.trim(); // Ganti ID
+const guestMessage = document.getElementById('guestMessage').value.trim();
+const attendance = document.getElementById('attendance').value;
+
+// Check if all required fields are filled
+if (!guestNameRSVP || !guestMessage || !attendance) {
+  alert('Please fill out all fields.');
+  return;
+}
+
+// Create an object with form data
+const formData = {
+  name: guestNameRSVP,
+  message: guestMessage,
+  attendance: attendance
+};
+
+// Submit form data
+fetch('https://tema-4-rsvp-handle.glitch.me/rsvp', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify(formData)
+})
+.then(response => response.json())
+.then(data => {
+  if (data.success) {
+    alert('RSVP submitted successfully!');
+    location.reload(); // Optionally, reload the page after submission
+  } else {
+    alert('Error: ' + data.error);
+  }
+})
+.catch(error => {
+  console.error('Error submitting RSVP:', error);
+});
+});
 });
 
 // Function to show a specific section within the frame
