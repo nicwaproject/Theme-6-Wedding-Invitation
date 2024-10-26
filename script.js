@@ -27,6 +27,34 @@ document.addEventListener('DOMContentLoaded', () => {
             showSection(sectionToShow);
         });
     });
+
+    
+    const countdown = () => {
+      const weddingDate = new Date("2024-12-31T00:00:00").getTime(); // Set tanggal pernikahan
+      const now = new Date().getTime();
+      const timeDiff = weddingDate - now;
+      
+      // Perhitungan waktu (hari, jam, menit, detik)
+      const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+      
+      // Update elemen countdown
+      document.getElementById("days").innerText = days;
+      document.getElementById("hours").innerText = hours;
+      document.getElementById("minutes").innerText = minutes;
+      document.getElementById("seconds").innerText = seconds;
+  
+      // Jika countdown selesai, tampilkan pesan
+      if (timeDiff < 0) {
+        clearInterval(timer);
+        document.getElementById("countdown").innerHTML = "<h2>The Event Has Started!</h2>";
+      }
+    };
+    
+    // Perbarui countdown setiap detik
+    const timer = setInterval(countdown, 1000);
 });
 
 // Function to show a specific section within the frame
